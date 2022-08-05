@@ -1,0 +1,11 @@
+.logout{
+    display: flex;
+    justify-content: end;
+}
+
+h1{
+    color: red;
+}
+body{
+    background-color: #fff212;
+}

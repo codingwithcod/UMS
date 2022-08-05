@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="public/css/style.css">
+
+<h3>Welcome, <%= user.name  %> </h3>
+
+<table width="50%">
+    <tr>
+        <td> <img src="/userImages/<%= user.image %> " alt="<%= user.image %> " width="100px" height="100px" border-radius="50%"></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><%= user.email  %> </td>
+    </tr>
+    <tr>
+        <td>Mobile</td>
+        <td><%= user.mobile  %> </td>
+    </tr>
+    <tr>
+        <td>Verified</td>
+        <% if (user.is_verified === 0) {
+            %> <td> No</td> <%
+        } else {
+            %> <td> yes</td> <%
+        }  %> 
+    </tr>
+</table>
+<a href="/edit?id=<%= user._id%>">Edit Profile</a>
+<div class="logout">
+    <a href="/logout">logout</a>
+</div>
